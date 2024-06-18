@@ -45,7 +45,7 @@ const Navbar = () => {
                     Jobs
                   </NavLink>
 
-                  <NavLink to='/add-job' className={isClassActive}>
+                  <NavLink to='/Add-Job' className={isClassActive}>
                     Add Job
                   </NavLink>
                 </div>
