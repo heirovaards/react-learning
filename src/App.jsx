@@ -14,6 +14,7 @@ import Counter from "./pages/Counter";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import JobPage, {jobLoader} from "./pages/JobPage";
 import Props from "./pages/Props";
 
 // router
@@ -22,11 +23,13 @@ const router = createBrowserRouter(
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path='/Jobs' element={<JobsPage />} />
+      <Route path='/Jobs/:id' element={<JobPage />} loader={jobLoader} />
       <Route path='*' element={<NotFoundPage />} />
 
       {/* sinau path */}
       <Route path='/Counter' element={<Counter />} />
       <Route path='/Props' element={<Props name="John Doe" />} />
+      {/* <Route path='/UseEffect' element={<UseEffect />} /> */}
     </Route>
   )
 );
